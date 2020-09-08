@@ -69,7 +69,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/src/assets/variables.scss'],
     theme: {
       dark: true,
       themes: {
@@ -90,4 +90,5 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  srcDir: 'src',
 }
