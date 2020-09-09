@@ -91,14 +91,11 @@ export default {
    */
   build: {
     babel: {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       presets({ isServer }) {
-        return [
-          [
-            "@nuxt/babel-preset-app", { loose: true }
-          ]
-        ]
-      }
-    }
+        return [['@nuxt/babel-preset-app', { loose: true }]]
+      },
+    },
   },
   srcDir: 'src',
 }
