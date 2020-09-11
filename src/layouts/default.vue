@@ -7,7 +7,7 @@
       fixed
       app
     >
-      <drawer-content />
+      <drawer-content :items="drawerItems" />
     </v-navigation-drawer>
 
     <v-app-bar :clipped-left="clipped" fixed app>
@@ -39,5 +39,12 @@ export default class DefaultLayout extends Vue {
   fixed: boolean = false
   miniVariant: boolean = false
   title: string = 'ランダム選択'
+  drawerItems = [
+    {
+      icon: 'fas fa-home',
+      title: 'ホーム',
+      to: '/',
+    },
+  ]
 }
 </script>

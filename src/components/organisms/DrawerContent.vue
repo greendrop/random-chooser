@@ -20,16 +20,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class DrawerContent extends Vue {
-  items = [
-    {
-      icon: 'fas fa-home',
-      title: 'ホーム',
-      to: '/',
-    },
-  ]
+  @Prop({ type: Array, required: true })
+  items!: typeof Object[]
 }
 </script>
