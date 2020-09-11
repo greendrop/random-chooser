@@ -30,7 +30,7 @@ import DrawerContent from '~/components/organisms/DrawerContent.vue'
 
 @Component
 export default class DefaultLayout extends Vue {
-  clipped: boolean = false
+  clipped: boolean = true
   drawer: boolean | null = null
   fixed: boolean = false
   miniVariant: boolean = false

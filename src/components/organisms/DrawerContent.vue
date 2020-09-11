@@ -1,16 +1,15 @@
 <template>
   <div>
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title class="title">
-          Application
-        </v-list-item-title>
-        <v-list-item-subtitle>
-          subtext
-        </v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
-    <v-divider />
+    <v-list>
+      <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+        <v-list-item-action>
+          <v-icon small>{{ item.icon }}</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title v-text="item.title" />
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
   </div>
 </template>
 
@@ -18,5 +17,13 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
-export default class DrawerContent extends Vue {}
+export default class DrawerContent extends Vue {
+  items = [
+    {
+      icon: 'fas fa-home',
+      title: 'ホーム',
+      to: '/'
+    }
+  ]
+}
 </script>
