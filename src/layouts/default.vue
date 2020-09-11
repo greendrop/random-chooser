@@ -26,9 +26,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import DrawerContent from '~/components/organisms/DrawerContent.vue'
+import DrawerContent from '@/components/organisms/DrawerContent.vue'
 
-@Component
+@Component({
+  components: {
+    DrawerContent,
+  },
+})
 export default class DefaultLayout extends Vue {
   clipped: boolean = true
   drawer: boolean | null = null

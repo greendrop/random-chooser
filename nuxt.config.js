@@ -32,9 +32,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '@fortawesome/fontawesome-free/css/all.css',
-  ],
+  css: ['@fortawesome/fontawesome-free/css/all.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -57,10 +55,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/axios',
-    'nuxt-fontawesome'
-  ],
+  modules: ['@nuxtjs/axios'],
   axios: {},
   vuetify: {
     customVariables: ['~/src/assets/variables.scss'],
@@ -86,9 +81,9 @@ export default {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      }
-    ]
+        icons: ['fas'],
+      },
+    ],
   },
   /*
    ** Build configuration
