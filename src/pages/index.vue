@@ -1,6 +1,10 @@
 <template>
   <div>
-    <choice-list :choices="choices" @addChoice="addChoiceHandler" />
+    <choice-list
+      :choices="choices"
+      @addChoice="addChoiceHandler"
+      @deleteChoice="deleteChoiceHandler"
+    />
   </div>
 </template>
 
@@ -19,6 +23,14 @@ export default class IndexPage extends Vue {
 
   addChoiceHandler(choice: Choice) {
     this.choices.push(choice)
+  }
+
+  deleteChoiceHandler(choice: Choice) {
+    const index = this.choices.findIndex((item) => item.key === choice.key)
+
+    if (index >= 0) {
+      this.choices.splice(index, 1)
+    }
   }
 }
 </script>

@@ -5,7 +5,7 @@
     </v-list-item-content>
 
     <v-list-item-action>
-      <v-btn>削除</v-btn>
+      <v-btn @click="deleteChoice">削除</v-btn>
     </v-list-item-action>
   </v-list-item>
 </template>
@@ -18,5 +18,9 @@ import Choice from '~/models/Choice'
 export default class ChoiceListItem extends Vue {
   @Prop({ type: Object, required: true })
   choice!: Choice
+
+  deleteChoice() {
+    this.$emit('deleteChoice', this.choice)
+  }
 }
 </script>

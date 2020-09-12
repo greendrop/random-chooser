@@ -10,6 +10,7 @@
         v-for="choice in choices"
         :key="choice.key"
         :choice="choice"
+        @deleteChoice="deleteChoiceHandler"
       />
       <v-divider v-if="choices.length > 0" />
       <add-choice-form @addChoice="addChoiceHandler" />
@@ -32,6 +33,10 @@ export default class ChoiceList extends Vue {
 
   addChoiceHandler(choice: Choice) {
     this.$emit('addChoice', choice)
+  }
+
+  deleteChoiceHandler(choice: Choice) {
+    this.$emit('deleteChoice', choice)
   }
 }
 </script>
