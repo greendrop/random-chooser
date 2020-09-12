@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import DrawerContent from '@/components/organisms/DrawerContent.vue'
+import DrawerContent from '~/components/organisms/DrawerContent.vue'
 
 @Component({
   components: {
