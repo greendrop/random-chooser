@@ -4,6 +4,9 @@
       <v-list-item-content>
         <v-list-item-title class="headline">選択対象</v-list-item-title>
       </v-list-item-content>
+      <v-list-item-action>
+        <v-btn @click="deleteAllChoices">全削除</v-btn>
+      </v-list-item-action>
     </v-list-item>
     <v-card-text>
       <choice-list-item
@@ -30,6 +33,10 @@ import Choice from '~/models/Choice'
 export default class ChoiceList extends Vue {
   @Prop({ type: Array, required: true })
   choices!: typeof Choice[]
+
+  deleteAllChoices() {
+    this.$emit('deleteAllChoices')
+  }
 
   addChoiceHandler(choice: Choice) {
     this.$emit('addChoice', choice)

@@ -4,6 +4,7 @@
       :choices="choices"
       @addChoice="addChoiceHandler"
       @deleteChoice="deleteChoiceHandler"
+      @deleteAllChoices="deleteAllChoicesHandler"
     />
   </div>
 </template>
@@ -31,6 +32,10 @@ export default class IndexPage extends Vue {
     if (index >= 0) {
       this.choices.splice(index, 1)
     }
+  }
+
+  deleteAllChoicesHandler() {
+    this.choices = []
   }
 }
 </script>
