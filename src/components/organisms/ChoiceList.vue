@@ -11,7 +11,8 @@
         :key="choice.key"
         :choice="choice"
       />
-      <v-divider />
+      <v-divider v-if="choices.length > 0" />
+      <add-choice-form @addChoice="addChoiceHandler" />
     </v-card-text>
   </v-card>
 </template>
@@ -19,13 +20,18 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import ChoiceListItem from '~/components/molecules/ChoiceListItem.vue'
+import AddChoiceForm from '~/components/molecules/AddChoiceForm.vue'
 import Choice from '~/models/Choice'
 
 @Component({
-  components: { ChoiceListItem },
+  components: { ChoiceListItem, AddChoiceForm },
 })
 export default class ChoiceList extends Vue {
   @Prop({ type: Array, required: true })
   choices!: typeof Choice[]
+
+  addChoiceHandler(choice: Choice) {
+    this.$emit('addChoice', choice)
+  }
 }
 </script>

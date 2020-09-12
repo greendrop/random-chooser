@@ -1,6 +1,6 @@
 <template>
   <div>
-    <choice-list :choices="choices" />
+    <choice-list :choices="choices" @addChoice="addChoiceHandler" />
   </div>
 </template>
 
@@ -15,6 +15,10 @@ import Choice from '@/models/Choice'
   },
 })
 export default class IndexPage extends Vue {
-  choices: Choice[] = [new Choice({ name: 'aaa' }), new Choice({ name: 'bbb' })]
+  choices: Choice[] = []
+
+  addChoiceHandler(choice: Choice) {
+    this.choices.push(choice)
+  }
 }
 </script>
