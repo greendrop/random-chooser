@@ -38,12 +38,12 @@ export default class ChoiceList extends Vue {
     this.$emit('deleteAllChoices')
   }
 
-  addChoiceHandler(choice: Choice) {
-    this.$emit('addChoice', choice)
+  addChoiceHandler(payload: { [key: string]: any }) {
+    this.$emit('addChoice', payload)
   }
 
-  deleteChoiceHandler(choice: Choice) {
-    this.$emit('deleteChoice', choice)
+  deleteChoiceHandler(payload: { [key: string]: any }) {
+    this.$emit('deleteChoice', payload)
   }
 }
 </script>

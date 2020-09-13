@@ -49,7 +49,8 @@ export default class AddChoiceForm extends Vue {
   addChoice() {
     this.observer.validate().then((result) => {
       if (result) {
-        this.$emit('addChoice', new Choice({ name: this.currentName }))
+        const payload = { choice: new Choice({ name: this.currentName }) }
+        this.$emit('addChoice', payload)
         this.clearForm()
       }
     })

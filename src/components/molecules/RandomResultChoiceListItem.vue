@@ -3,10 +3,6 @@
     <v-list-item-content>
       <v-list-item-title v-text="choice.name"></v-list-item-title>
     </v-list-item-content>
-
-    <v-list-item-action>
-      <v-btn @click="deleteChoice">削除</v-btn>
-    </v-list-item-action>
   </v-list-item>
 </template>
 
@@ -15,13 +11,8 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import Choice from '~/models/Choice'
 
 @Component
-export default class ChoiceListItem extends Vue {
+export default class RandomResultChoiceListItem extends Vue {
   @Prop({ type: Object, required: true })
   choice!: Choice
-
-  deleteChoice() {
-    const payload = { choice: this.choice }
-    this.$emit('deleteChoice', payload)
-  }
 }
 </script>
