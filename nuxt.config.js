@@ -58,7 +58,7 @@ export default {
   modules: ['@nuxtjs/axios'],
   axios: {},
   vuetify: {
-    customVariables: ['~/src/assets/variables.scss'],
+    customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
       themes: {
