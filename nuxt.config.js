@@ -51,6 +51,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics',
   ],
   /*
    ** Nuxt.js modules
@@ -77,13 +78,8 @@ export default {
       iconfont: 'fa',
     },
   },
-  fontawesome: {
-    imports: [
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas'],
-      },
-    ],
+  googleAnalytics: {
+    id: '',
   },
   /*
    ** Build configuration
@@ -95,6 +91,11 @@ export default {
       presets({ isServer }) {
         return [['@nuxt/babel-preset-app', { loose: true }]]
       },
+    },
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
     },
   },
   srcDir: 'src',
