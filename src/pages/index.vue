@@ -32,6 +32,20 @@ import ChoiceGroup from '~/models/ChoiceGroup'
     ChoiceList,
     RandomChoiceExecution,
   },
+  head: {
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '選択肢を入力し、ランダムで選択できるツールです。',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'ランダム選択',
+      },
+    ],
+  },
 })
 export default class IndexPage extends Vue {
   choices: Choice[] = []

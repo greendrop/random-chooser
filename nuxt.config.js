@@ -27,6 +27,11 @@ export default {
         content: '',
       },
       {
+        hid: 'keywords',
+        name: 'keywords',
+        content: '',
+      },
+      {
         hid: 'google-site-verification',
         name: 'google-site-verification',
         content: process.env.GOOGLE_SITE_VERIFICATION,
