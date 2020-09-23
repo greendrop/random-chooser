@@ -26,6 +26,11 @@ export default {
         name: 'description',
         content: '',
       },
+      {
+        hid: 'google-site-verification',
+        name: 'google-site-verification',
+        content: process.env.GOOGLE_SITE_VERIFICATION,
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
