@@ -66,7 +66,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/robots', '@nuxtjs/sitemap'],
   axios: {},
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -90,6 +90,10 @@ export default {
   },
   googleAnalytics: {
     id: '',
+  },
+  robots: {
+    UserAgent: '*',
+    Sitemap: 'https://random-chooser.sysgreenplus.net/sitemap.xml',
   },
   sitemap: {
     path: '/sitemap.xml',
