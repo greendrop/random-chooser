@@ -66,7 +66,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
   axios: {},
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -90,6 +90,11 @@ export default {
   },
   googleAnalytics: {
     id: '',
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    gzip: true,
+    hostname: 'https://random-chooser.sysgreenplus.net/',
   },
   /*
    ** Build configuration
